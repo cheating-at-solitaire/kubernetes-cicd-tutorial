@@ -52,7 +52,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add deployment.yaml
-          git commit -m "Update image to ${{ github.sha }}"
+          git commit -m "update" || echo "No changes to commit"
           
           # Push
           git push -f https://${GIT_TOKEN}@github.com/cheating-at-solitaire/grade-api-gitops.git main
